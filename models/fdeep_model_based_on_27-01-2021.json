@@ -1,0 +1,229 @@
+{
+  "architecture": {
+    "backend": "tensorflow",
+    "class_name": "Functional",
+    "config": {
+      "input_layers": [
+        [
+          "input_1",
+          0,
+          0
+        ]
+      ],
+      "layers": [
+        {
+          "class_name": "InputLayer",
+          "config": {
+            "batch_input_shape": [
+              null,
+              18
+            ],
+            "dtype": "float32",
+            "name": "input_1",
+            "ragged": false,
+            "sparse": false
+          },
+          "inbound_nodes": [],
+          "name": "input_1"
+        },
+        {
+          "class_name": "Dense",
+          "config": {
+            "activation": "relu",
+            "activity_regularizer": null,
+            "batch_input_shape": [
+              null,
+              18
+            ],
+            "bias_constraint": null,
+            "bias_initializer": {
+              "class_name": "Zeros",
+              "config": {}
+            },
+            "bias_regularizer": null,
+            "dtype": "float32",
+            "kernel_constraint": null,
+            "kernel_initializer": {
+              "class_name": "VarianceScaling",
+              "config": {
+                "distribution": "uniform",
+                "mode": "fan_avg",
+                "scale": 1.0,
+                "seed": null
+              }
+            },
+            "kernel_regularizer": null,
+            "name": "dense_124",
+            "trainable": true,
+            "units": 16,
+            "use_bias": true
+          },
+          "inbound_nodes": [
+            [
+              [
+                "input_1",
+                0,
+                0,
+                {}
+              ]
+            ]
+          ],
+          "name": "dense_124"
+        },
+        {
+          "class_name": "Dense",
+          "config": {
+            "activation": "relu",
+            "activity_regularizer": null,
+            "bias_constraint": null,
+            "bias_initializer": {
+              "class_name": "Zeros",
+              "config": {}
+            },
+            "bias_regularizer": null,
+            "dtype": "float32",
+            "kernel_constraint": null,
+            "kernel_initializer": {
+              "class_name": "VarianceScaling",
+              "config": {
+                "distribution": "uniform",
+                "mode": "fan_avg",
+                "scale": 1.0,
+                "seed": null
+              }
+            },
+            "kernel_regularizer": null,
+            "name": "dense_125",
+            "trainable": true,
+            "units": 16,
+            "use_bias": true
+          },
+          "inbound_nodes": [
+            [
+              [
+                "dense_124",
+                0,
+                0,
+                {}
+              ]
+            ]
+          ],
+          "name": "dense_125"
+        },
+        {
+          "class_name": "Dense",
+          "config": {
+            "activation": "linear",
+            "activity_regularizer": null,
+            "bias_constraint": null,
+            "bias_initializer": {
+              "class_name": "Zeros",
+              "config": {}
+            },
+            "bias_regularizer": null,
+            "dtype": "float32",
+            "kernel_constraint": null,
+            "kernel_initializer": {
+              "class_name": "VarianceScaling",
+              "config": {
+                "distribution": "uniform",
+                "mode": "fan_avg",
+                "scale": 1.0,
+                "seed": null
+              }
+            },
+            "kernel_regularizer": null,
+            "name": "dense_126",
+            "trainable": true,
+            "units": 1,
+            "use_bias": true
+          },
+          "inbound_nodes": [
+            [
+              [
+                "dense_125",
+                0,
+                0,
+                {}
+              ]
+            ]
+          ],
+          "name": "dense_126"
+        }
+      ],
+      "name": "sequential_42",
+      "output_layers": [
+        [
+          "dense_126",
+          0,
+          0
+        ]
+      ]
+    },
+    "keras_version": "2.5.0"
+  },
+  "hash": "3e1c036fd2ffe22a6f4108169d0b8b15157c7393fef43c4b1c7c8c0f4012a976",
+  "image_data_format": "channels_last",
+  "input_shapes": [
+    [
+      18
+    ]
+  ],
+  "output_shapes": [
+    [
+      1
+    ]
+  ],
+  "tests": [
+    {
+      "inputs": [
+        {
+          "shape": [
+            18
+          ],
+          "values": [
+            "3F4Ov8YZzj2GDLW+o+bdP7xZ8j+J4KA/z9TtvwtZkL5jFEY/N7VcP9uVhj+6QvC/eMuXP96eAL9bRQ0/wmk2v2fUsz/46zM/"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "shape": [
+            1
+          ],
+          "values": [
+            "tvV4Pg=="
+          ]
+        }
+      ]
+    }
+  ],
+  "trainable_params": {
+    "dense_124": {
+      "bias": [
+        "9TfJPsVZN76sSE2+VkJYvWmpg7uLy8E+hrAgvtB3Sz6jffU+f2sOvbSToz5NTxs/fxW5vrqB5L6Mdzq90d+ZPA=="
+      ],
+      "weights": [
+        "Dr31PTdrQ74K1wy9se2zPZ7p0r619Iq+zwYFPrF1Ab5s3Ni9Qb6MvpgtHbomyY69lYYjPQ67Frzatju9eg3nvYdekL7hClW+T4qdPptyQz7BrNO9bpoaPXAPaj7I85G8h6u8PVI/Rz7vEKY933h0PoeAMr7G/qU+ARE6vkSDMz2zTDA+eeGSPQ7h+DxdD6Q9MUUQvlIQkD6lMVa+tX3lu5XR6j3Gg+G9ILtuPQuGVLxjhk6+MjIzPhrKID4DJ4+9O/gHPW/bsLxMqW++BHUOPjWcqD5YzTq9J5goPglGGb6neD6+sCyBvqw6U77ASv+8bHI5PsAVUr7K8ZW7b2CEPlorGj5mMyY+PI42volf0DwA3w0+APabPgfVur21py0+jZYpvErz2Dz21S4+t7TNvRGy1j3/mAQ+jqQJPT8+Rr3KO5Q9JVBzvlkHF746QJQ+5fxxPovL/b0/Jc09orBAvl9Krb4oHFQ+9Lp+vrTuJboPU+o9rdyavnF/fz5lyF0+TqqvveXZlD3nVUm+6q78PeFUBD4QZ22+lzpZvpLCE772j709owSjPn3Fkb59gWe8BdMfvj50sj6a2m0+CpKDvmYutj7+Xzc+0vQivsS9Trqhty2+eJcpPugcGb+jmDu+ubf8Pviztb6jR4S9gRmXProg9j1GOQG+68nNPlKMYz56NEC+jpoGP/9NAj9zMqE+a1GpvlZPLb9NkAa/+pVLv3U0mz4J93a+l46CPu7Uzj4eD3I+H+/9PZUgGD8+/Rc/LAHBPTyV2j64X4W94D+YPo88Zr0hyu49bKlVPvE4Gr7NxpS9uDKYPtwRGL8q6AY88Gk8PKG7dj6VUOQ9BviTvRg9dL4FWBm+poydvhsYCb7CB589Sebqvp8vdD5PiqE9C1xxPv0DGD+LZIe+LhA8PGbpFz4NO/q9rXGzvg/shL6rZVM+xWWFPuCy670K1MY9Q59cvpj+OT2EM/I9sgHDveTWVj7yCMA9GUd1PnkFIz3Lre28ZrCvvQoyyL14hnu9",
+        "BE49PSeVab0/N48+Pr26vQWr7b0+NSK+tGjjOSx5Qr0pTYq+QozJPlq3xb3n9Ra+kARhPQdNO72ZOak+qg0RvVQsDD7sCOQ94nHCvrPl7DxQM5m+Res7PvZLJr1pPJO7/x6vPgFgSr24nx6+lvA6PSbZP71NWq4+I4UmPsIY/r1ocpk+dCk9vlPZyb7vnRm+SRJ5vvzo5z2NJec8ThoivjuyjD6aH4c+d8D1vbYnd7t3b0q+EyS0vtR3OD23nlg84F6AvsApXj5kewy/Nj0XvKlTr77Vmc8+CNDRvdRvrD5ikYG+N+K5PIuWKz5SzMU86Xu8vshxDb4xBVu99P9sPm/aIL4cafu+46alvQZjyr1iiy6+9jn8PEApRb47thA+YC6SvT+FUr7EkjO8+Aj7Oz5yG7/WgS+/4GSYPjKBEr4yE0C/GCMtv3PFtz6GmL0+bgDaPtjWID9wYAI/Xh2/vndUfj7YKvC95AxSP9eD3b8i3LS+/xD8vmXVLb4tz8A8"
+      ]
+    },
+    "dense_125": {
+      "bias": [
+        "cq2vvkk77j6V6IQ+0VTOvj362L1CTxk+NYndPS7EyDzKUtu91R2Xvk79EL7TeQs+IM7EPoE2pj3/fIM9opknvQ=="
+      ],
+      "weights": [
+        "wzM+vgYBRT67gaM+NZ/XPGRHVD4GgkE+jjAPP/VnRT5Z3RG8U0iqPexLFb6UeYI+YUeaPYCGJr4yonC+SxX9vRuSkL5YC9K+xpm1vFruyz6EOhw+AwddvpmrIL+YN7s8mEuEPo7J7z6g5Cs+yaWVPrWeWT4WqDK+f05Zv/k5mr661qi9dWAyv7TRFT6eMKI+KKikvrv00T6it2e9F2YKv1NnsD2mHje+PHvKPmNsGj5habg9ohoMPjW88b2KgIE+Sp6nPnK5YL47hGs9lH65vo/Iaj3Zheg+KBcDvwXMI76rQ9+98M6TvdxU3z7gvjg9dTN3PvZ9uL7b/ZO+NaltvhuN3Ty0E+q+01y2Poaaer6OpR2+YxXJvGtir73Xzue+LUPvPPHcpL5bgxg+oqICvuAeTz1Nu/09DSGxvk576b6IBq8+cvTtPq8oyb0oGHa+HEphPmAcsj2srAy9jd1ZvsyENj2ZvAnAV/SvvvxTwr138oO9RUOyvgBU471AJka+IhTfPpuPhz38ohG+6Ku3Pv5xTbzTJZg+y1H3vWGrOL46IJ08EmyKPeCF2z0bn4M+xM8APVbVpT1yBmu+x5wFvwDaPb7WIFg+FkA/Pk6Gdz2g0gE+1PGuPdY+mj7uiZo+HLHSvd5dpz7u84G9+5iwPnpcojsls+U+5qQkvr9XJ73Undw8hw6hvQ9TTD5Pzpm8hKZgvnwwP755TtE92iuxvhV3Eb8qLwO/hb/DPvKCZr47yQs+Qi/fPqtv8T2Wu8a+ZO6OursgHL7xixC91BaxvlmPQr1JLqK+HVMjPmc1oD5et76+M7AbwH6PGL6gYVA+zRdgPkqNvTyYQ1w+fZVNPuEH5j7hIsA+RmaRvtpHAsDMcgq9uNfFvmmMgL5YBj2+eAW1PvpfccDxne8+bhHaPR8xob5GRTW9qXyUvrhMmz74BYK+dhtyvu4NAD57b6A+yI0KP/z6VbhSko++hSO9PQorAT2c0hM/FOiRvkDz9j6X/xO+dCQsPZx5iL5vd82+",
+        "0kUQvgdazb54tBk+dxHuvMs4PL8yX3O+ErRivm6PiDy9AzQ+GN34Phguuz4YYyo+TbFLv2aPAb3Lx6M+aaVhPiFo5r2CIqy8SM1zPonBbD5OMji/Azd7vMlxAr6Ta9y8l7VsvcWNjD4FC1A+cGBOvXztKL8VrAQ+8NZTv0Lezj1CfeO9LLA/vSf3UT5zTFs7T1rwvZwPX77xflG/ykYNvYJRcr2JNyE+nCDFPp/u0T21QIa9bDiSvR5Lnj6w1Ww+ZcS0vs3c+D7PqbA9omUQPmJlVj6DQmG+PBswv0q6FD5NlHq+ZpNKvuDh9D7zWH2+z6mCvjiOiL4WzCW+ICCpvg=="
+      ]
+    },
+    "dense_126": {
+      "bias": [
+        "kNutvQ=="
+      ],
+      "weights": [
+        "ITGivi4jZD7wc7a+FDtuPpL1yr7q2Jq+jJlVvkO7Nr72tYY+EvU8PwTg/T6caAe/6S4dPyzMCb7Ft5M+G7iUvw=="
+      ]
+    }
+  }
+}
