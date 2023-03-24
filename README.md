@@ -37,7 +37,7 @@ This will create a new environment in your terminal containing the following sub
 
 Now, change to directory containing the c++ source code:
 
-    root@50cbb3aeb5ff:/home# cd learning-in-dijkstra/learning-in-dijkstra/src-raw/
+    root@50cbb3aeb5ff:/home# cd learning-in-dijkstra/learning-in-dijkstra/src/
 
 ### Source Code
 
