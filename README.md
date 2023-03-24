@@ -12,7 +12,7 @@ We are grateful to Ruben Brokkelkamp for creating an initial implementation of o
 
 Download the code from github by cloning the repository:
 
-    git clone https://github.com/w-feijen/learning-in-dijkstra.git
+    git clone https://github.com/w-feijen/dijkstra-predictions-for-SSMTSP.git
 
 Below, we use `<local-path>` to refer to the (absolute) path of the directory containing the code.
 
