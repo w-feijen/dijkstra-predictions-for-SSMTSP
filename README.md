@@ -20,7 +20,7 @@ Below, we use `<local-path>` to refer to the (absolute) path of the directory co
 
 We use [Docker](https://www.docker.com) to package up our code and all its dependencies to make it self-contained and platform independent. Please make sure that you have Docker installed (e.g., Docker Desktop) and that it is running in the background.
 
-1.  In the directory `docker`, edit the script `run_docker.sh` to adjust the path to your `<local-path>` accordingly:
+1.  In the directory `docker`, edit the script `create_docker.sh` to adjust the path to your `<local-path>` accordingly:
     
         docker run -i -t -v <local-path>:/home/learning-in-dijkstra dijkstra /bin/bash
 
@@ -28,7 +28,7 @@ We use [Docker](https://www.docker.com) to package up our code and all its depen
 
 3.  Build the Docker image by running the `build_docker.sh` script. This may take some time.
 
-4.  Run the Docker image by executing the script `run_docker.sh`.
+4.  Run the Docker image by executing the script `create_docker.sh`.
 
 This will create a new environment in your terminal containing the following sub-directories:
 
