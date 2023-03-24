@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
   
   // read neural network and corresponding data
   std::string nn_model_filename;
-  nn_model_filename = "based_on_27-01-2021_iterations_zeros_no_bool_no_norm2021_01_27_1725";
+  nn_model_filename = "based_on_27-01-2021";
   std::shared_ptr<fdeep::model> nn_model;
   nn_model = std::make_shared<fdeep::model>(fdeep::load_model("../models/fdeep_model_" + nn_model_filename + ".json"));
   std::shared_ptr<NN> nn_model_info;
