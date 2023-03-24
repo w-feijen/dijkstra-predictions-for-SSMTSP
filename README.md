@@ -7,9 +7,7 @@ This repository contains the code which was used for the experiments described i
 > arXiv link: [https://arxiv.org/abs/2112.11927](https://arxiv.org/abs/2112.11927)
 
 
-## Acknowledgements
-
-We are grateful to Ruben Brokkelkamp for creating an initial implementation of our algorithms in C++, which we used as a starting point to build the rest of our code around.
+**Acknowledgements:** We are grateful to Ruben Brokkelkamp for creating an initial implementation of our algorithms in C++, which we used as a starting point to build the rest of our code around.
 
 ## How to use
 
@@ -119,7 +117,7 @@ You can remove all object and/or executable files by calling:
 
 ### Create NN Model Notebook
 
-The traces which were used to build the neural network model are in the `b_files` folder. The notebook `python\create_nn_model.ipynb` shows an example of how these traces can be used to train a neural network model. It outputs a `model.h5` file. This should be converted into a file which frugally-deep can read. To do so, run the `convert_model.py` model with the `model.h5` file as input. The `convert_model.py` method can be found in the fdeep folder after building the docker container. See https://github.com/Dobiasd/frugally-deep for more explanation. The `convert_model.py` outputs a `fdeep_model.json` file which can be read by fdeep in our C++ code.
+The traces which were used to build the neural network model are in the `b_files` folder. The notebook `python/create_nn_model.ipynb` shows an example of how these traces can be used to train a neural network model. It outputs a `model.h5` file. This should be converted into a file which frugally-deep can read. To do so, run the `convert_model.py` model with the `model.h5` file as input. The `convert_model.py` method can be found in the fdeep folder after building the docker container. See https://github.com/Dobiasd/frugally-deep for more explanation. The `convert_model.py` outputs a `fdeep_model.json` file which can be read by fdeep in our C++ code.
 
 
 ## License
