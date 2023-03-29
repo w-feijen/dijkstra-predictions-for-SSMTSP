@@ -10,7 +10,7 @@ void NN::read_info_file( ){
   //Read the info for the network with specified filename.
   //Info like sample_means, sample_stds is read
   
-  std::string infofilename =  "info_" + nn_model_filename + ".txt";
+  std::string infofilename =  "../models/info_" + nn_model_filename + ".txt";
   
   //std::cout << "Reading infofile" << infofilename;
   
